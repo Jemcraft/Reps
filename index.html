@@ -11,43 +11,61 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </head>
   <body>
-    <h1 class="text-center title">Reps</h1>
 
-<div class="container-fluid rep-container text-center">
-    <div class="container rep-row">
+
+<div class="container-fluid">
+    <div class="container col-sm-3"></div><!--container col-3 close-->
+
+    <div class="container col-sm-6 text-center">
+        <h1 class="title">Reps</h1>
+    </div><!--container col-6 close-->
+
+    <div class="container col-sm-3">
+        <p id="date"></p>
+    </div><!--container col-3 close-->
+</div><!--container-fluid close-->
+
+
+
+    <div class="container text-center">
         <button type="button" class="btn btn-lg btn-default btn-rep">Frodo</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Sam</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Gandalf</button>
-    </div>
-
-    <div class="container rep-row">
+        <button type="button" class="btn btn-lg btn-default btn-rep">Merri</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Sauron</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Aragorn</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Legolas</button>
-    </div>
-
-    <div class="container rep-row">
+        <button type="button" class="btn btn-lg btn-default btn-rep">Borimir</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Gimli</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Pippin</button>
-        <button type="button" class="btn btn-lg btn-default btn-rep">Merry</button>
-    </div>
-    </div><!--rep-container close-->
+        <button type="button" class="btn btn-lg btn-default btn-rep">Farimir</button>
+        <button type="button" class="btn btn-lg btn-default btn-rep">Gollum</button>
+    </div><!--container close-->
 
 
 <script>
 $(document).ready(function() {
 
+    //Button select
     $("button").on('click', function() {
       $(this).toggleClass("btn-success btn-default");
     });
+
+    //Date stamp
+    function timeStamp() {
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var now = new Date();
+        var month = monthNames[now.getMonth()];
+        var date = [ month, now.getDate(), now.getFullYear() ];
+      return [month + " " + now.getDate() + ", " + now.getFullYear() ];
+    };
+    document.getElementById("date").innerHTML = timeStamp();
+
 
 });
 </script>
 
 
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
