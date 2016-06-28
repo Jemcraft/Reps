@@ -8,13 +8,17 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
+    <script src="js/jquery-3.0.0.min.js"></script>
   <body>
 
 
+<!--Title, Date, Help-->
 <div class="container-fluid">
-    <div class="container col-sm-4"></div><!--container col-3 close-->
+    <div class="container col-sm-4">
+      <i class="fa fa-question-circle fa-lg help" aria-hidden="true"></i>
+    </div><!--container col-3 close-->
 
     <div class="container col-sm-4 text-center">
         <h1 class="title">Reps</h1>
@@ -25,8 +29,11 @@
     </div><!--container col-3 close-->
 </div><!--container-fluid close-->
 
+  <div class="container text-center">
+      <p id="switch">Switch</p>
+  </div>
 
-
+    <!--Rep buttons-->
     <div class="container col-sm-12 text-center">
         <button type="button" class="btn btn-lg btn-default btn-rep">Frodo</button>
         <button type="button" class="btn btn-lg btn-default btn-rep">Sam</button>
