@@ -13,7 +13,9 @@
 }
 
 #date {
+	text-align: right;
 	padding-top: 3.5em;
+    padding-right: 4em;
 	font-weight: bold;
 	font-size: 130%;
 }
@@ -22,6 +24,7 @@
 @media only screen and (max-width : 768px){
 	#date {
 		text-align: center;
+		padding-right: 0;
 		padding-top: 0;
 		padding-bottom: 10px;
 	}
